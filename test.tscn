@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://test.gd" type="Script" id=1]
+[ext_resource path="res://bocal/bocal.tscn" type="PackedScene" id=3]
+
+[node name="test" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="bocal" parent="." instance=ExtResource( 3 )]
+
+[node name="Button" type="Button" parent="."]
+margin_left = 296.0
+margin_top = 16.0
+margin_right = 472.0
+margin_bottom = 48.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="bocal" method="start"]
